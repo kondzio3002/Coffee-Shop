@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coffee shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,8 @@
 
   <body>
     <header class="splash">
-      <img src="./images/background.png">
+      <img src="./images/background.png" alt="image">
       <div class="container">
-        
         <nav class="nav row">
           <div class="col-3">
           <div class="nav-brand">
@@ -31,12 +30,10 @@
             </ul>
           </div>
         </nav>
-        
         <div class="splash-inner">
           <h1>HOME OF</h1>
           <h1>ORIGINAL TASTES</h1>
         </div>
-        
         <div class="splash-foot">
           <p>DISCOVER</p>
           <i class="icon-arrow"></i>
@@ -44,7 +41,14 @@
       </div>
     </header>
 
-    <section class="products">
+    <div id="pages">
+      <section id="products">
+        <h2 class="section-title">PRODUCTS</h2>
+        <div id="products-list" class="products"></div>
+      </section>
+    </div>
+
+    <!--<section class="products">
       <div class="container">
         <h2 class="section-title">PRODUCTS</h2>
           <div class="row">
@@ -57,12 +61,12 @@
               </div>
             </div>
             <div class="col products-image">
-              <img src="./images/coffee-1.png">
+              <img src="./images/coffee-1.png" alt="image">
             </div>
           </div>
           <div class="row">
             <div class="col products-image">
-              <img src="./images/coffee-2.png">
+              <img src="./images/coffee-2.png" alt="image">
             </div>
             <div class="col products-description pd-right">
               <h3>02. EL TIGRE</h3>
@@ -70,7 +74,7 @@
               <div class="properties">
                 <p>ROASTING: <span>8/10</span></p>
                 <p>INTENSITY: <span>9/10</span></p>
-              </div>    
+              </div>
             </div>
           </div>
           <div class="row">
@@ -83,13 +87,60 @@
               </div>
             </div>
             <div class="col products-image">
-              <img src="./images/coffee-3.png">
+              <img src="./images/coffee-3.png" alt="image">
             </div>
           </div>
       </div>
-    </section>
+    </section>-->
 
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-    <script src="js/script.js" type="module"></script>-->
+    <script id="template-products" type="text/x-handlebars-template">
+      <div class="products">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col products-description">
+              <h3>{{ title }}</h3>
+              <p class="description">{{ description }}</p>
+              <div class="properties">
+                <p>ROASTING: <span>{{ roasting }}</span></p>
+                <p>INTENSITY: <span>{{ intensity }}</span></p>
+              </div>
+            </div>
+            <div class="col products-image">
+              <img src="{{ image }}" alt="image">
+            </div>
+          </div>
+          <!--<div class="row">
+            <div class="col products-image">
+              <img src="{{ image }}" alt="image">
+            </div>
+            <div class="col products-description pd-right">
+              <h3>{{ title }}</h3>
+              <p class="description">{{ description }}</p>
+              <div class="properties">
+                <p>ROASTING: <span>{{ roasting }}</span></p>
+                <p>INTENSITY: <span>{{ intensity }}</span></p>
+              </div>
+            </div>
+          </div>-->
+          <!--<div class="row">
+            <div class="col products-description">
+              <h3>03. LA CUCARACHA</h3>
+              <p class="description">Sweet and intense with a big amount of different flavors. Caramel, grapes, strawberry, you name it! It's great choice for warm summer days</p>
+              <div class="properties">
+                <p>ROASTING: <span>3/10</span></p>
+                <p>INTENSITY: <span>7/10</span></p>
+              </div>
+            </div>
+            <div class="col products-image">
+              <img src="./images/coffee-3.png" alt="image">
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>
