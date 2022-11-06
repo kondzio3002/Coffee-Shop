@@ -1,4 +1,4 @@
-import {settings, templates, select, classNames} from './settings.js';
+import {templates, select, classNames} from './settings.js';
 import utils from './function.js';
 import dataSource from './data.js';
 

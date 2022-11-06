@@ -5,17 +5,20 @@
   letter-spacing: 6px;
   font-size: 20px;
   font-weight: $font-semibold;
+
   input{
     height: 40px;
     width: 300px;
     border: 2px solid $color-dark;
   }
+
   textarea{
     width: 300px;
     height: 80px;
     resize: none;
     border: 2px solid $color-dark;
   }
+
   button{
     padding: 16px;
     text-align: center;
